@@ -20,7 +20,7 @@ class FeedForward(nn.Module):
         # token-mixer (dim=196, hidden_dim=256)
         # channel-mixer (dim=512, hidden_dim=2048)
         super().__init__()
-        # input (B, ch/patch, dim) ?
+        # input (B, ch/patch, dim)
         self.net = nn.Sequential(
             # (B, ch/patch, dim) -> (B, ch/patch, hidden_dim)
             nn.Linear(dim, hidden_dim),
@@ -29,7 +29,7 @@ class FeedForward(nn.Module):
             # (B, ch/patch, hidden_dim) -> (B, ch/patch, dim)
             nn.Linear(hidden_dim, dim),
             nn.Dropout(dropout)
-            # output (B, ch/patch, dim) input, output shape
+            # output (B, ch/patch, dim)
         )
     def forward(self, x):
         return self.net(x)
