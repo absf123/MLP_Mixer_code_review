@@ -17,8 +17,8 @@ This code review comments by younghan, deokjoong
 ![](channel_mlp_layer.PNG)
 ***
 
-### 🎯 Mixer architecture
-![](Mixer architecture.PNG)
+### ⚙ Mixer architecture
+![](Mixer architectures.PNG)
 ***
   
 # 🔔 Another variation version paper
