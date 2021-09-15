@@ -105,7 +105,7 @@ class MLPMixer(nn.Module):
         self.to_patch_embedding = nn.Sequential(
             nn.Conv2d(in_channels, dim, patch_size, patch_size),  # filter size=stride : non overlapping
             # (B, 3, 224, 224) -> (B, 512, 14, 14)
-            Rearrange('b c h w -> b (h w) c'),  # Rearrange 설명
+            Rearrange('b c h w -> b (h w) c'),
             # (B, 512, 14, 14) -> (B, 196, 512)
         )
         # Holds Mixer modules in a list.
