@@ -3,16 +3,16 @@
 
 This code review comments by younghan, deokjoong
 
-* 🎯 Overall framework
+### 🎯 Overall framework
 ![](architecture.PNG)
 
 
-* 🎯 token mixing MLP : "mixing" spatial information
+### 🎯 token mixing MLP : "mixing" spatial information
 ![](token_mixing_mlp.PNG)
 ![](token_mlp_layer.PNG)
 
 
-* 🎯 channel mixing MLP : "mixing" the per-location features
+### 🎯 channel mixing MLP : "mixing" the per-location features
 ![](channel_mixing_mlp.PNG)
 ![](channel_mlp_layer.PNG)
 
