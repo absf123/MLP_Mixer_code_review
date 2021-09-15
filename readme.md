@@ -13,7 +13,7 @@ This code review comments by younghan, deokjoong
 ***
 
 ### 🎯 channel mixing MLP : "mixing" the per-location features
-![](channel_mixing_mlp.PNG) 
+![](channel_mixing_mlp.PNG) </br>
 ![](channel_mlp_layer.PNG)
 ***
 
