@@ -18,7 +18,7 @@ This code review comments by younghan, deokjoong
 ***
 
 ### ⚙ Mixer architecture
-![](Mixer architectures.PNG)
+![](Mixer_architecture.PNG)
 ***
   
 # 🔔 Another variation version paper
