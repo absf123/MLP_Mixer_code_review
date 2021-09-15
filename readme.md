@@ -3,16 +3,18 @@
 
 This code review comments by younghan, deokjoong
 
-### Overall framework
-![](architecture.PNG){: width="80%" height="80%"}
+### 🎯 Overall framework
+![](architecture.PNG)
+***
+### 🎯 token mixing MLP
+![](token_mixing_mlp.PNG)
+![](token_mlp_layer.PNG)
+***
+### 🎯 channel mixing MLP
+![](channel_mixing_mlp.PNG)
+![](channel_mlp_layer.PNG)
+***
 
-### token mixing MLP
-![](token_mixing_mlp.PNG){: width="50%" height="50%"}
-![](token_mlp_layer.PNG){: width="50%" height="50%"}
-
-### channel mixing MLP
-![](channel_mixing_mlp.PNG){: width="50%" height="50%"}
-![](channel_mlp_layer.PNG){: width="50%" height="50%"}
 
 ### 🔔 Another variation paper
 1. CycleMLP: A MLP-like Architecture for Dense Prediction (https://arxiv.org/pdf/2107.10224.pdf)  
