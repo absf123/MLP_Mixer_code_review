@@ -17,6 +17,9 @@ This code review comments by younghan, deokjoong
 ![](channel_mlp_layer.PNG)
 ***
 
+### 🎯 Mixer architecture
+![](Mixer architecture.PNG)
+***
   
 # 🔔 Another variation version paper
 1. CycleMLP: A MLP-like Architecture for Dense Prediction (https://arxiv.org/pdf/2107.10224.pdf)  
