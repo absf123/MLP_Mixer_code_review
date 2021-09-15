@@ -9,13 +9,13 @@ from einops.layers.torch import Rearrange
 
 class FeedForward(nn.Module):
     """
-    MLP structure
+    3. MLP structure
     """
     def __init__(self, dim, hidden_dim, dropout = 0.):
         """
         :param dim:        linear input dimension
         :param hidden_dim: linear hidden dimension
-        :param dropout:    ratio of dropout
+        :param dropout:    dropout ratio
         """
         # token-mixer (dim=196, hidden_dim=256)
         # channel-mixer (dim=512, hidden_dim=2048)
@@ -31,12 +31,13 @@ class FeedForward(nn.Module):
             nn.Dropout(dropout)
             # output (B, ch/patch, dim)
         )
+
     def forward(self, x):
         return self.net(x)
 
 class MixerBlock(nn.Module):
     """
-    Mixer layer : token-mixer MLP, channel-mixer MLP
+    2. Mixer layer : token-mixer MLP, channel-mixer MLP
     """
     def __init__(self, dim, num_patch, token_dim, channel_dim, dropout = 0.):
         """
@@ -44,7 +45,7 @@ class MixerBlock(nn.Module):
         :param num_patch:   # of patches
         :param token_dim:   token-mixing MLP hidden dimension
         :param channel_dim: channel-mixing MLP hidden dimension
-        :param dropout:     ratio of dropout in Feedforward newtork
+        :param dropout:     dropout ratio in Feedforward network
         """
         # (dim=512, num_patch=196, token_dim=256, channel_dim=2048)
         super().__init__()
@@ -80,6 +81,9 @@ class MixerBlock(nn.Module):
 
 
 class MLPMixer(nn.Module):
+    """
+    1. Overall framework
+    """
     def __init__(self, in_channels, dim, num_classes, patch_size, image_size, depth, token_dim, channel_dim):
         """
         :param in_channels: RGB channel
@@ -103,7 +107,6 @@ class MLPMixer(nn.Module):
             # (B, 3, 224, 224) -> (B, 512, 14, 14)
             Rearrange('b c h w -> b (h w) c'),  # Rearrange 설명
             # (B, 512, 14, 14) -> (B, 196, 512)
-
         )
         # Holds Mixer modules in a list.
         self.mixer_blocks = nn.ModuleList([])
@@ -135,7 +138,6 @@ class MLPMixer(nn.Module):
 
 
 
-
 if __name__ == "__main__":
     img = torch.ones([1, 3, 224, 224])
 
@@ -148,5 +150,5 @@ if __name__ == "__main__":
 
     out_img = model(img)
 
-    print("Shape of out :", out_img.shape)  # [B, in_channels, image_size, image_size]
+    print("Shape of out :", out_img.shape)
 
