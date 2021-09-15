@@ -2,7 +2,7 @@
 (https://arxiv.org/pdf/2105.01601.pdf)
 
 This code review comments by younghan, deokjoong
-
+</br>
 ### 🎯 Overall framework
 ![](architecture.PNG)
 ***
@@ -16,7 +16,7 @@ This code review comments by younghan, deokjoong
 ![](channel_mixing_mlp.PNG) </br>
 ![](channel_mlp_layer.PNG)
 ***
-
+</br>
 # 🔔 Another variation version paper
 1. CycleMLP: A MLP-like Architecture for Dense Prediction (https://arxiv.org/pdf/2107.10224.pdf)  
 2. Resmlp: Feedforward networks for image classification with data-efficient training (https://arxiv.org/abs/2105.03404)  
